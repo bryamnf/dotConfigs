@@ -1,4 +1,4 @@
 -- init.lua
-require("lua.options")
-require("lua.keymaps")
-require("lua.plugins")
+require("options")
+require("keymaps")
+require("plugins")
