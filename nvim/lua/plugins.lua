@@ -10,5 +10,5 @@ Plug('ggandor/leap.nvim')
 -- End of Plugins
 vim.call('plug#end')
 
--- Plugin set up
-require('leap').add_default_mappings()
+require('config')
+
