@@ -12,5 +12,8 @@ keymap("v", "<leader>k", "gg", opts)          -- Top of file
 keymap("v", "<leader>j", "G", opts)           -- Bottom of file
 
 -- Clipboard
-vim.keymap.set('v', '<leader>y', '"+y')
-vim.keymap.set({'n','v'}, '<leader>p', '"+p')
+keymap.set('v', '<leader>y', '"+y')
+keymap.set({'n','v'}, '<leader>p', '"+p')
+
+-- Explore
+
