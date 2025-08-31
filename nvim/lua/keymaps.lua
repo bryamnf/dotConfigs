@@ -10,3 +10,7 @@ keymap("v", "<leader>l", "$", opts)           -- End of line
 keymap("v", "<leader>h", "^", opts)           -- Beginning of line
 keymap("v", "<leader>k", "gg", opts)          -- Top of file
 keymap("v", "<leader>j", "G", opts)           -- Bottom of file
+
+-- Clipboard
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set({'n','v'}, '<leader>p', '"+p')
