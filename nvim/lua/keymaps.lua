@@ -13,7 +13,7 @@ keymap("v", "<leader>j", "G", opts)           -- Bottom of file
 
 -- Clipboard
 keymap('v', '<leader>y', '"+y')
-keymap({'n','v'}, '<leader>p', '"+p')
+keymap({'n','v'}, '<leader>p', '"+p',opts)
 
 -- Explore
-keymap({'n','v'}, 'e',':Ex<CR>',ots)
+keymap({'n','v'}, 'e',':Ex<CR>',opts)
