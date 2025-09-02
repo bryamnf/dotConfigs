@@ -12,8 +12,8 @@ keymap("v", "<leader>k", "gg", opts)          -- Top of file
 keymap("v", "<leader>j", "G", opts)           -- Bottom of file
 
 -- Clipboard
-keymap.set('v', '<leader>y', '"+y')
-keymap.set({'n','v'}, '<leader>p', '"+p')
+keymap('v', '<leader>y', '"+y')
+keymap({'n','v'}, '<leader>p', '"+p')
 
 -- Explore
-
+keymap({'n','v'}, 'e',':Ex<CR>',ots)
