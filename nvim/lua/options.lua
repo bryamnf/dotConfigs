@@ -5,4 +5,4 @@ vim.g.mapleader = " "
 vim.o.relativenumber = true
 
 -- Clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.api.nvim_set_option("clipboard", "unnamed")
