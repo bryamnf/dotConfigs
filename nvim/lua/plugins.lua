@@ -7,6 +7,7 @@ vim.call('plug#begin')
 
 Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
 Plug('ggandor/leap.nvim')
+Plug("nvim-treesitter/nvim-treesitter", {branch = 'master', lazy = false, build = ":TSUpdate"})
 
 -- End of Plugins
 vim.call('plug#end')
