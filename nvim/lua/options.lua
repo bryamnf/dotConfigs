@@ -6,3 +6,6 @@ vim.o.relativenumber = true
 
 -- Clipboard
 vim.api.nvim_set_option("clipboard", "unnamed")
+
+-- Add parser directory to runtimepath
+vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/parsers")
