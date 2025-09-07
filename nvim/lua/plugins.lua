@@ -8,7 +8,7 @@ vim.call('plug#begin')
 Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
 Plug('ggandor/leap.nvim')
 Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
-Plug('catppuccin/nvim', { ['as'] = 'cappuccin' })
+Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
 
 -- End of Plugins
 vim.call('plug#end')

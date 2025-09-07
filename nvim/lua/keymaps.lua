@@ -16,4 +16,4 @@ keymap('v', '<leader>y', '"+y')
 keymap({'n','v'}, '<leader>p', '"+p',opts)
 
 -- Explore
-keymap({'n','v'}, 'e',':Ex<CR>',opts)
+keymap({'n','v'}, 'q',':Ex<CR>',opts)
