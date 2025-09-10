@@ -9,3 +9,6 @@ vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- Add parser directory to runtimepath
 vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/parsers")
+
+-- Enable built-in lua module caching
+vim.loader.enable()

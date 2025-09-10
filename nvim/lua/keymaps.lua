@@ -17,3 +17,6 @@ keymap({'n','v'}, '<leader>p', '"+p',opts)
 
 -- Explore
 keymap({'n','v'}, 'q',':Ex<CR>',opts)
+
+-- Esc from terminal mode
+keymap('t', '<Esc>', [[<C-\><C-n>]], opts)

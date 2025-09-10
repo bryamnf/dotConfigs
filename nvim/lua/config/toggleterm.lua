@@ -1,9 +1,5 @@
 require("toggleterm").setup()
 ----------------------------------------------------------------
--- Keymaps
---
--- Esc from terminal mode
-vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {noremap = true})
 
 ---------Creating toggle for floating terminal with only one keymap---------
 -- create a dedicated floating terminal
@@ -19,5 +15,5 @@ function _FLOAT_TERM_TOGGLE()
 end
 
 -- keymap to toggle it
-vim.keymap.set({"n", "t"}, "<leader>t", _FLOAT_TERM_TOGGLE, { noremap = true, silent = true })
+--vim.keymap.set({"n", "t"}, "<leader>t", _FLOAT_TERM_TOGGLE, { noremap = true, silent = true })
 ------------------------------------------------------------------------------
