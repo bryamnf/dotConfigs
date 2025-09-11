@@ -20,3 +20,10 @@ keymap({'n','v'}, 'q',':Ex<CR>',opts)
 
 -- Esc from terminal mode
 keymap('t', '<Esc>', [[<C-\><C-n>]], opts)
+-- Move between windows in terminal mode
+keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+-- Keep ctrl w functionality in terminal mode
+keymap('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
