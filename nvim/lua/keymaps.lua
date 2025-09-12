@@ -27,3 +27,10 @@ keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 -- Keep ctrl w functionality in terminal mode
 keymap('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
+
+-- Resize window using <ctrl> arrow keys
+keymap("n", "<C-Up>", "<cmd>resize +1<cr>", { desc = "Increase Window Height" })
+keymap("n", "<C-Down>", "<cmd>resize -1<cr>", { desc = "Decrease Window Height" })
+keymap("n", "<C-Left>", "<cmd>vertical resize -1<cr>", { desc = "Decrease Window Width" })
+keymap("n", "<C-Right>", "<cmd>vertical resize +1<cr>", { desc = "Increase Window Width" })
+
