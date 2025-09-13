@@ -17,13 +17,13 @@ keymap({'n','v','t'}, '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
 keymap({'n','v','t'}, '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap({'n','v','t'}, '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 keymap({'n','v','t'}, '<C-s>', [[<Cmd>wincmd s<CR>]], opts)
-keymap({'n','v','t'}, '<C-\\>', [[<Cmd>wincmd v<CR>]], opts)
+keymap({'n','v','t'}, '<C-a>', [[<Cmd>wincmd v<CR>]], opts)
 keymap({'n','v','t'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
 keymap({'n','v','t'}, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
 
 -- Adding new lines
-keymap("n", "a", ":call append(line('.'), '')<CR>", opts)
-keymap("n", "A", ":call append(line('.')-1, '')<CR>", opts)
+keymap("n", "<leader>o", ":call append(line('.'), '')<CR>", opts)
+keymap("n", "<leader>O", ":call append(line('.')-1, '')<CR>", opts)
 
 
 -- Clipboard
