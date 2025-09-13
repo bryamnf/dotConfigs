@@ -31,8 +31,6 @@ keymap({'n','v'}, 'q',':Ex<CR>',opts)
 
 -- Esc from terminal mode
 keymap('t', '<Esc>', [[<C-\><C-n>]], opts)
--- Keep ctrl w functionality in terminal mode
-keymap('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 
 -- Resize window using <ctrl> arrow keys
 keymap("n", "<C-Up>", "<cmd>resize +1<cr>", { desc = "Increase Window Height" })
