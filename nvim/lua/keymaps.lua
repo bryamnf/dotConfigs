@@ -11,6 +11,18 @@ keymap("v", "<leader>h", "^", opts)           -- Beginning of line
 keymap("v", "<leader>k", "gg", opts)          -- Top of file
 keymap("v", "<leader>j", "G", opts)           -- Bottom of file
 
+-- Windows
+keymap({'n','v','t'}, '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap({'n','v','t'}, '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap({'n','v','t'}, '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap({'n','v','t'}, '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+keymap({'n','v','t'}, '<C-s>', [[<Cmd>wincmd s<CR>]], opts)
+keymap({'n','v','t'}, '<C-v>', [[<Cmd>wincmd v<CR>]], opts)
+keymap({'n','v','t'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
+keymap({'n','v','t'}, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
+
+
+
 -- Clipboard
 keymap('v', '<leader>y', '"+y')
 keymap({'n','v'}, '<leader>p', '"+p',opts)
@@ -20,11 +32,6 @@ keymap({'n','v'}, 'q',':Ex<CR>',opts)
 
 -- Esc from terminal mode
 keymap('t', '<Esc>', [[<C-\><C-n>]], opts)
--- Move between windows in terminal mode
-keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 -- Keep ctrl w functionality in terminal mode
 keymap('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 
