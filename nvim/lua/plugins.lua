@@ -9,6 +9,7 @@ Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
 Plug('ggandor/leap.nvim')
 Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
+Plug("nvim-treesitter/nvim-treesitter-context")
 
 -- End of Plugins
 vim.call('plug#end')
