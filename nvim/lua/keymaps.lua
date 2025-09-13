@@ -21,6 +21,9 @@ keymap({'n','v','t'}, '<C-v>', [[<Cmd>wincmd v<CR>]], opts)
 keymap({'n','v','t'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
 keymap({'n','v','t'}, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
 
+-- Adding new lines
+keymap("n", "a", ":call append(line('.'), '')<CR>", opts)
+keymap("n", "A", ":call append(line('.')-1, '')<CR>", opts)
 
 
 -- Clipboard
