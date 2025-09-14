@@ -5,11 +5,12 @@ vim.call('plug#begin')
 
 -- Beginning of Plugins
 
-Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
-Plug('ggandor/leap.nvim')
-Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
+Plug('ggandor/leap.nvim')
+Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
+Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
 Plug("nvim-treesitter/nvim-treesitter-context")
+Plug("nvim-treesitter/nvim-treesitter-textobjects")
 
 -- End of Plugins
 vim.call('plug#end')
