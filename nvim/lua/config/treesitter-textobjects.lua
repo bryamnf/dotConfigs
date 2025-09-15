@@ -50,10 +50,6 @@ require'nvim-treesitter.configs'.setup {
         -- Numbers (useful in math-heavy code)
         ["an"] = "@number.inner",
 
-        -- Attributes (e.g. decorators, annotations)
-        ["aa"] = "@attribute.outer",
-        ["ia"] = "@attribute.inner",
-
         -- Statements
         ["as"] = "@statement.outer",
 
