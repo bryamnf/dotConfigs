@@ -61,10 +61,6 @@ require'nvim-treesitter.configs'.setup {
         -- Statements
         ["as"] = "@statement.outer",
 
-        -- Frame (in languages that support it)
-        ["afm"] = "@frame.outer",
-        ["ifm"] = "@frame.inner",
-
         -- Scopename (like variable or function name in declaration)
         ["is"] = "@scopename.inner",
 	},
@@ -83,15 +79,15 @@ require'nvim-treesitter.configs'.setup {
       },
     },
 
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<leader>a"] = "@parameter.inner",
-      },
-      swap_previous = {
-        ["<leader>A"] = "@parameter.inner",
-      },
-    },
+    --swap = {
+    --  enable = true,
+    --  swap_next = {
+    --    ["<leader>a"] = "@parameter.inner",
+    --  },
+    --  swap_previous = {
+    --    ["<leader>A"] = "@parameter.inner",
+    --  },
+    --},
 
   },
 }
