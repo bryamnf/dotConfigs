@@ -18,8 +18,8 @@ require'nvim-treesitter.configs'.setup {
         ["ib"] = "@block.inner",
 
         -- Conditionals (if, unless, etc.)
-        ["a?"] = "@conditional.outer",
-        ["i?"] = "@conditional.inner",
+        ["am"] = "@conditional.outer",
+        ["im"] = "@conditional.inner",
 
         -- Loops
         ["al"] = "@loop.outer",
@@ -35,7 +35,7 @@ require'nvim-treesitter.configs'.setup {
         ["l="] = "@assignment.lhs",
         ["r="] = "@assignment.rhs",
 
-        -- Calls
+        -- Function calls
         ["afc"] = "@call.outer",
         ["ifc"] = "@call.inner",
 
