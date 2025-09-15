@@ -54,10 +54,6 @@ require'nvim-treesitter.configs'.setup {
         ["aa"] = "@attribute.outer",
         ["ia"] = "@attribute.inner",
 
-        -- Regex
-        ["a/"] = "@regex.outer",
-        ["i/"] = "@regex.inner",
-
         -- Statements
         ["as"] = "@statement.outer",
 
