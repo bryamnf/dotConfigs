@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 vim.o.relativenumber = true
 
 -- Clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- Add parser directory to runtimepath
 vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/parsers")
