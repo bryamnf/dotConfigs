@@ -4,7 +4,7 @@ set -e #fail at error!
 # Set up nvim
 sudo snap install nvim --classic
 sudo apt update -y 
-sudo apt install tree-sitter-cli -y
+sudo apt install tree-sitter-cli wl-clipboard -y
 
 ln -sfn ~/dotconfigs/nvim ~/.config/nvim
 
