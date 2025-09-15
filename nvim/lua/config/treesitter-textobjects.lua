@@ -1,11 +1,12 @@
 require'nvim-treesitter.configs'.setup {
   textobjects = {
 
+    -- Selection
     select = {
       enable = true,
-      lookahead = false, -- like targets.vim
+      lookahead = true, -- auto-jump forward to textobj like targets.vim
       keymaps = {
-	-- Functions
+        -- Functions
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
 
@@ -13,21 +14,21 @@ require'nvim-treesitter.configs'.setup {
         ["ac"] = "@class.outer",
         ["ic"] = "@class.inner",
 
-        -- Blocks (e.g. do...end, { ... })
+        -- Blocks
         ["ab"] = "@block.outer",
         ["ib"] = "@block.inner",
 
-        -- Conditionals (if, unless, etc.)
-        ["am"] = "@conditional.outer",
-        ["im"] = "@conditional.inner",
+        -- Conditionals (d = decision)
+        ["ad"] = "@conditional.outer",
+        ["id"] = "@conditional.inner",
 
         -- Loops
         ["al"] = "@loop.outer",
         ["il"] = "@loop.inner",
 
-        -- Parameters
-        ["ap"] = "@parameter.outer",
-        ["ip"] = "@parameter.inner",
+        -- Parameters (a = argument)
+        ["aa"] = "@parameter.outer",
+        ["ia"] = "@parameter.inner",
 
         -- Assignments
         ["a="] = "@assignment.outer",
@@ -35,9 +36,9 @@ require'nvim-treesitter.configs'.setup {
         ["l="] = "@assignment.lhs",
         ["r="] = "@assignment.rhs",
 
-        -- Function calls
-        ["afc"] = "@call.outer",
-        ["ifc"] = "@call.inner",
+        -- Calls (x = execute)
+        ["ax"] = "@call.outer",
+        ["ix"] = "@call.inner",
 
         -- Returns
         ["ar"] = "@return.outer",
@@ -47,39 +48,81 @@ require'nvim-treesitter.configs'.setup {
         ["a/"] = "@comment.outer",
         ["i/"] = "@comment.inner",
 
-        -- Numbers (useful in math-heavy code)
+        -- Numbers
         ["an"] = "@number.inner",
 
         -- Statements
         ["as"] = "@statement.outer",
 
-        -- Scopename (like variable or function name in declaration)
+        -- Scopename (like identifier in decls)
         ["is"] = "@scopename.inner",
-	},
+      },
     },
 
+    -- Movement
     move = {
       enable = true,
       set_jumps = true,
+
       goto_next_start = {
-        ["]m"] = "@function.outer",
-        ["]]"] = "@class.outer",
+        ["]f"] = "@function.outer",
+        ["]c"] = "@class.outer",
+        ["]b"] = "@block.outer",
+        ["]d"] = "@conditional.outer", -- decision
+        ["]l"] = "@loop.outer",
+        ["]a"] = "@parameter.inner",
+        ["]="] = "@assignment.outer",
+        ["]x"] = "@call.outer",        -- execute
+        ["]r"] = "@return.outer",
+        ["]/"] = "@comment.outer",
+        ["]n"] = "@number.inner",
+        ["]s"] = "@statement.inner",
       },
+
+      goto_next_end = {
+        ["]F"] = "@function.outer",
+        ["]C"] = "@class.outer",
+        ["]B"] = "@block.outer",
+        ["]D"] = "@conditional.outer",
+        ["]L"] = "@loop.outer",
+        ["]A"] = "@parameter.inner",
+        ["]+"] = "@assignment.outer",
+        ["]X"] = "@call.outer",
+        ["]R"] = "@return.outer",
+        ["]?"] = "@comment.outer",
+        ["]N"] = "@number.inner",
+        ["]S"] = "@statement.outer",
+      },
+
       goto_previous_start = {
-        ["[m"] = "@function.outer",
-        ["[["] = "@class.outer",
+        ["[f"] = "@function.outer",
+        ["[c"] = "@class.outer",
+        ["[b"] = "@block.outer",
+        ["[d"] = "@conditional.outer",
+        ["[l"] = "@loop.outer",
+        ["[a"] = "@parameter.inner",
+        ["[="] = "@assignment.outer",
+        ["[x"] = "@call.outer",
+        ["[r"] = "@return.outer",
+        ["[/"] = "@comment.outer",
+        ["[n"] = "@number.inner",
+        ["[s"] = "@statement.outer",
+      },
+
+      goto_previous_end = {
+        ["[F"] = "@function.outer",
+        ["[C"] = "@class.outer",
+        ["[B"] = "@block.outer",
+        ["[D"] = "@conditional.outer",
+        ["[L"] = "@loop.outer",
+        ["[A"] = "@parameter.inner",
+        ["[+"] = "@assignment.outer",
+        ["[X"] = "@call.outer",
+        ["[R"] = "@return.outer",
+        ["[?"] = "@comment.outer",
+        ["[N"] = "@number.inner",
+        ["[S"] = "@statement.outer",
       },
     },
-
-    --swap = {
-    --  enable = true,
-    --  swap_next = {
-    --    ["<leader>a"] = "@parameter.inner",
-    --  },
-    --  swap_previous = {
-    --    ["<leader>A"] = "@parameter.inner",
-    --  },
-    --},
-
   },
 }
