@@ -3,4 +3,5 @@ require("toggleterm").setup{
  	open_mapping = [[<c-t>]],
 	size = 17,  -- number of lines for horizontal terminals
   	direction = "horizontal",
+	autochdir = true,
 }

@@ -14,8 +14,10 @@ keymap({'n','v','t'}, '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
 keymap({'n','v','t'}, '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
 keymap({'n','v','t'}, '<C-s>', [[<Cmd>wincmd s<CR>]], opts)
 keymap({'n','v','t'}, '<C-a>', [[<Cmd>wincmd v<CR>]], opts)
-keymap({'n','v','t'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
 keymap({'n','v','t'}, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
+keymap({'n','v'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
+-- Esc from terminal mode
+keymap('t', '<C-q>', [[<C-\><C-n>]], opts)
 
 -- Adding new lines
 keymap("n", "<leader>o", ":call append(line('.'), '')<CR>", opts)
@@ -29,8 +31,6 @@ keymap({'n','v'}, '<leader>p', '"+p',opts)
 -- Explore
 keymap({'n','v'}, 'q',':Ex<CR>',opts)
 
--- Esc from terminal mode
-keymap('t', '<Esc>', [[<C-\><C-n>]], opts)
 
 -- Resize window using <ctrl> arrow keys
 keymap("n", "<C-Up>", "<cmd>resize +1<cr>", { desc = "Increase Window Height" })
