@@ -11,6 +11,9 @@ Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
 Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
 Plug("nvim-treesitter/nvim-treesitter-context")
 Plug("nvim-treesitter/nvim-treesitter-textobjects")
+Plug("mason-org/mason.nvim")
+Plug("neovim/nvim-lspconfig")
+Plug("mason-org/mason-lspconfig.nvim")
 
 -- End of Plugins
 vim.call('plug#end')
