@@ -1,3 +1,3 @@
 require("mason-lspconfig").setup {
-    automatic_enable = true 
+    automatic_enable = false
 }
