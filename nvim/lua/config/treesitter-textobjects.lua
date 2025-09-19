@@ -19,8 +19,8 @@ require'nvim-treesitter.configs'.setup {
         ["ib"] = "@block.inner",
 
         -- Conditionals (d = decision)
-        ["ad"] = "@conditional.outer",
-        ["id"] = "@conditional.inner",
+        ["a?"] = "@conditional.outer",
+        ["i?"] = "@conditional.inner",
 
         -- Loops
         ["al"] = "@loop.outer",
@@ -68,7 +68,7 @@ require'nvim-treesitter.configs'.setup {
         ["]f"] = "@function.outer",
         ["]c"] = "@class.outer",
         ["]b"] = "@block.outer",
-        ["]d"] = "@conditional.outer", -- decision
+        ["]?"] = "@conditional.outer", -- decision
         ["]l"] = "@loop.outer",
         ["]a"] = "@parameter.inner",
         ["]="] = "@assignment.outer",
@@ -98,7 +98,7 @@ require'nvim-treesitter.configs'.setup {
         ["[f"] = "@function.outer",
         ["[c"] = "@class.outer",
         ["[b"] = "@block.outer",
-        ["[d"] = "@conditional.outer",
+        ["[?"] = "@conditional.outer",
         ["[l"] = "@loop.outer",
         ["[a"] = "@parameter.inner",
         ["[="] = "@assignment.outer",
