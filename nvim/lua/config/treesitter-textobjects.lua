@@ -10,25 +10,9 @@ require 'nvim-treesitter.configs'.setup {
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
 
-				-- Classes
-				["ac"] = "@class.outer",
-				["ic"] = "@class.inner",
-
-				-- Blocks
-				["ab"] = "@block.outer",
-				["ib"] = "@block.inner",
-
-				-- Conditionals (d = decision)
-				["a?"] = "@conditional.outer",
-				["i?"] = "@conditional.inner",
-
-				-- Loops
-				["al"] = "@loop.outer",
-				["il"] = "@loop.inner",
-
-				-- Parameters (a = argument)
-				["aa"] = "@parameter.outer",
-				["ia"] = "@parameter.inner",
+				-- Parameters
+				["ax"] = "@parameter.outer",
+				["ix"] = "@parameter.inner",
 
 				-- Assignments
 				["a="] = "@assignment.outer",
@@ -36,20 +20,36 @@ require 'nvim-treesitter.configs'.setup {
 				["l="] = "@assignment.lhs",
 				["r="] = "@assignment.rhs",
 
-				-- Calls (x = execute)
-				["ax"] = "@call.outer",
-				["ix"] = "@call.inner",
+				-- Comments
+				["a/"] = "@comment.outer",
+				["i/"] = "@comment.inner",
+
+				-- Conditionals
+				["ac"] = "@conditional.outer",
+				["ic"] = "@conditional.inner",
+
+				-- Loops
+				["al"] = "@loop.outer",
+				["il"] = "@loop.inner",
 
 				-- Returns
 				["ar"] = "@return.outer",
 				["ir"] = "@return.inner",
 
-				-- Comments
-				["a/"] = "@comment.outer",
-				["i/"] = "@comment.inner",
-
 				-- Numbers
 				["an"] = "@number.inner",
+
+				-- Calls (x = execute)
+				["ae"] = "@call.outer",
+				["ie"] = "@call.inner",
+
+				-- Classes
+				["acl"] = "@class.outer",
+				["icl"] = "@class.inner",
+
+				-- Blocks
+				["ab"] = "@block.outer",
+				["ib"] = "@block.inner",
 
 				-- Statements
 				["as"] = "@statement.outer",
@@ -65,63 +65,33 @@ require 'nvim-treesitter.configs'.setup {
 			set_jumps = true,
 
 			goto_next_start = {
-				["]f"] = "@function.outer",
-				["]c"] = "@class.outer",
-				["]b"] = "@block.outer",
-				["]?"] = "@conditional.outer", -- decision
-				["]l"] = "@loop.outer",
-				["]a"] = "@parameter.inner",
-				["]="] = "@assignment.outer",
-				["]x"] = "@call.outer", -- execute
-				["]r"] = "@return.outer",
-				["]/"] = "@comment.outer",
-				["]n"] = "@number.inner",
-				["]s"] = "@statement.inner",
+				["[f"] = "@function.outer",
+				["[x"] = "@parameter.inner",
+				["[a"] = "@assignment.outer",
+				["[/"] = "@comment.outer",
+				["[c"] = "@conditional.outer",
+				["[l"] = "@loop.outer",
+				["[r"] = "@return.outer",
+				["[n"] = "@number.inner",
+				["[e"] = "@call.outer", -- execute
+				["[cl"] = "@class.outer",
+				["[b"] = "@block.outer",
+				["[s"] = "@statement.inner",
 			},
 
 			goto_next_end = {
-				["]F"] = "@function.outer",
-				["]C"] = "@class.outer",
-				["]B"] = "@block.outer",
-				["]D"] = "@conditional.outer",
-				["]L"] = "@loop.outer",
-				["]A"] = "@parameter.inner",
-				["]+"] = "@assignment.outer",
-				["]X"] = "@call.outer",
-				["]R"] = "@return.outer",
-				["]?"] = "@comment.outer",
-				["]N"] = "@number.inner",
-				["]S"] = "@statement.outer",
-			},
-
-			goto_previous_start = {
-				["[f"] = "@function.outer",
-				["[c"] = "@class.outer",
-				["[b"] = "@block.outer",
-				["[?"] = "@conditional.outer",
-				["[l"] = "@loop.outer",
-				["[a"] = "@parameter.inner",
-				["[="] = "@assignment.outer",
-				["[x"] = "@call.outer",
-				["[r"] = "@return.outer",
-				["[/"] = "@comment.outer",
-				["[n"] = "@number.inner",
-				["[s"] = "@statement.outer",
-			},
-
-			goto_previous_end = {
-				["[F"] = "@function.outer",
-				["[C"] = "@class.outer",
-				["[B"] = "@block.outer",
-				["[D"] = "@conditional.outer",
-				["[L"] = "@loop.outer",
-				["[A"] = "@parameter.inner",
-				["[+"] = "@assignment.outer",
-				["[X"] = "@call.outer",
-				["[R"] = "@return.outer",
-				["[?"] = "@comment.outer",
-				["[N"] = "@number.inner",
-				["[S"] = "@statement.outer",
+				["]f"] = "@function.outer",
+				["]x"] = "@parameter.inner",
+				["]a"] = "@assignment.outer",
+				["]/"] = "@comment.outer",
+				["]c"] = "@conditional.outer",
+				["]l"] = "@loop.outer",
+				["]r"] = "@return.outer",
+				["]n"] = "@number.inner",
+				["]e"] = "@call.outer", -- execute
+				["]cl"] = "@class.outer",
+				["]b"] = "@block.outer",
+				["]s"] = "@statement.inner",
 			},
 		},
 	},
