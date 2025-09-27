@@ -2,20 +2,20 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Cursor movements
-keymap({'n','v'}, "<leader>l", "$", opts)           -- End of line
-keymap({'n','v'}, "<leader>h", "^", opts)           -- Beginning of line
-keymap({'n','v'}, "<leader>k", "gg", opts)          -- Top of file
-keymap({'n','v'}, "<leader>j", "G", opts)           -- Bottom of file
+keymap({ 'n', 'v' }, "<leader>l", "$", opts)  -- End of line
+keymap({ 'n', 'v' }, "<leader>h", "^", opts)  -- Beginning of line
+keymap({ 'n', 'v' }, "<leader>k", "gg", opts) -- Top of file
+keymap({ 'n', 'v' }, "<leader>j", "G", opts)  -- Bottom of file
 
 -- Windows
-keymap({'n','v','t'}, '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
-keymap({'n','v','t'}, '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
-keymap({'n','v','t'}, '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
-keymap({'n','v','t'}, '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
-keymap({'n','v','t'}, '<C-\\>', [[<Cmd>wincmd s<CR>]], opts)
-keymap({'n','v','t'}, '<C-s>', [[<Cmd>wincmd v<CR>]], opts)
-keymap({'n','v','t'}, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
-keymap({'n','v'}, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-l>', [[<Cmd>wincmd l<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-\\>', [[<Cmd>wincmd s<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-s>', [[<Cmd>wincmd v<CR>]], opts)
+keymap({ 'n', 'v', 't' }, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
+keymap({ 'n', 'v' }, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
 -- Esc from terminal mode
 keymap('t', '<C-q>', [[<C-\><C-n>]], opts)
 
@@ -26,10 +26,10 @@ keymap("n", "<leader>O", ":call append(line('.')-1, '')<CR>", opts)
 
 -- Clipboard
 keymap('v', '<leader>y', '"+y')
-keymap({'n','v'}, '<leader>p', '"+p',opts)
+keymap({ 'n', 'v' }, '<leader>p', '"+p', opts)
 
 -- Explore
-keymap({'n','v'}, 'q',':Ex<CR>',opts)
+keymap({ 'n', 'v' }, 'q', ':Ex<CR>', opts)
 
 
 -- Resize window using <ctrl> arrow keys
