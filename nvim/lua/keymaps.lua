@@ -2,10 +2,10 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Cursor movements
-keymap({ 'n', 'v' }, "<leader>l", "$", opts)  -- End of line
-keymap({ 'n', 'v' }, "<leader>h", "^", opts)  -- Beginning of line
-keymap({ 'n', 'v' }, "<leader>k", "gg", opts) -- Top of file
-keymap({ 'n', 'v' }, "<leader>j", "G", opts)  -- Bottom of file
+keymap({ 'n', 'v', 'o' }, "<leader>l", "$", opts)  -- End of line
+keymap({ 'n', 'v', 'o' }, "<leader>h", "^", opts)  -- Beginning of line
+keymap({ 'n', 'v', 'o' }, "<leader>k", "gg", opts) -- Top of file
+keymap({ 'n', 'v', 'o' }, "<leader>j", "G", opts)  -- Bottom of file
 
 -- Windows
 keymap({ 'n', 'v', 't' }, '<C-h>', [[<Cmd>wincmd h<CR>]], opts)
