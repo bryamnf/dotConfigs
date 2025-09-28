@@ -70,9 +70,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 
 		-- === COMPLETION ===
-		if client:supports_method("textDocument/completion") then
-			vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
-		end
+		--	if client:supports_method("textDocument/completion") then
+		--		vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
+		--	end
 
 		-- === AUTO-FORMAT ON SAVE ===
 		if not client:supports_method("textDocument/willSaveWaitUntil")
