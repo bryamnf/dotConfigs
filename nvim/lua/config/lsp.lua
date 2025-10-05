@@ -36,11 +36,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			map("n", "gK", vim.lsp.buf.signature_help, opts)
 			map("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 		end
-		if client:supports_method("textDocument/formatting") then
-			map("n", "<leader>f", function()
-				vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 1000 })
-			end, opts)
-		end
 
 		-- === ACTIONS ===
 		if client:supports_method("textDocument/codeAction") then
