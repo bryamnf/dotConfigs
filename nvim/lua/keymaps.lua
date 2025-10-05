@@ -1,6 +1,7 @@
 local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+
 -- Cursor movements
 keymap({ 'n', 'v', 'o' }, "<leader>l", "$", opts)  -- End of line
 keymap({ 'n', 'v', 'o' }, "<leader>h", "^", opts)  -- Beginning of line
@@ -16,12 +17,16 @@ keymap({ 'n', 'v', 't' }, '<C-s>h', [[<Cmd>wincmd s<CR>]], opts)
 keymap({ 'n', 'v', 't' }, '<C-s>v', [[<Cmd>wincmd v<CR>]], opts)
 keymap({ 'n', 'v', 't' }, '<C-o>', [[<Cmd>wincmd o<CR>]], opts)
 keymap({ 'n', 'v' }, '<C-q>', [[<Cmd>wincmd q<CR>]], opts)
+
 -- Esc from terminal mode
 keymap('t', '<C-q>', [[<C-\><C-n>]], opts)
 
 -- Adding new lines
 keymap("n", "<leader>o", ":call append(line('.'), '')<CR>", opts)
 keymap("n", "<leader>O", ":call append(line('.')-1, '')<CR>", opts)
+
+-- Save file
+keymap({ "i", "v", "n" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 
 
 -- Clipboard
