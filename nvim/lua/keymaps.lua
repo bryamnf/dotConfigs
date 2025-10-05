@@ -51,6 +51,12 @@ keymap({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = 
 
 -- Esc highlight mode
 vim.keymap.set({ 'i', 'n', 'v' }, '<Esc>', function()
-	vim.cmd('nohlsearch')
-	return '<Esc>'
+  vim.cmd('nohlsearch')
+  return '<Esc>'
 end, { expr = true, desc = 'Escape and clear search highlight' })
+
+
+-- Go back
+keymap("n", "gb", "<C-o>", opts)
+-- Go forward
+keymap("n", "gf", "<C-i>", opts)
