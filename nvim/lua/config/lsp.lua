@@ -36,7 +36,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			map("n", "gK", vim.lsp.buf.signature_help, opts)
 			map("i", "<C-k>", vim.lsp.buf.signature_help, opts)
 		end
-
+		if client:supports_method("textDocument/formatting") then
+			map("n", "<C-f>", function()
+				vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 1000 })
+			end, opts)
+		end
 		-- === ACTIONS ===
 		if client:supports_method("textDocument/codeAction") then
 			map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
@@ -64,21 +68,5 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			end)
 		end, opts)
 
-		-- === COMPLETION ===
-		--	if client:supports_method("textDocument/completion") then
-		--		vim.lsp.completion.enable(true, client.id, bufnr, { autotrigger = true })
-		--	end
-
-		-- === AUTO-FORMAT ON SAVE ===
-		if not client:supports_method("textDocument/willSaveWaitUntil")
-		    and client:supports_method("textDocument/formatting") then
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				group = vim.api.nvim_create_augroup("my.lsp.format", { clear = false }),
-				buffer = bufnr,
-				callback = function()
-					vim.lsp.buf.format({ bufnr = bufnr, id = client.id, timeout_ms = 1000 })
-				end,
-			})
-		end
 	end,
 })
