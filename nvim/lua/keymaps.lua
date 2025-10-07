@@ -60,3 +60,6 @@ end, { expr = true, desc = 'Escape and clear search highlight' })
 keymap("n", "gb", "<C-o>", opts)
 -- Go forward
 keymap("n", "gf", "<C-i>", opts)
+
+-- Autocomplete in insert mode from lsp
+keymap("i", "<C-Space>", "<C-x><C-o>", opts)
