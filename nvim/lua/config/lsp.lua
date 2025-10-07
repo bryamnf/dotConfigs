@@ -47,7 +47,7 @@ M.on_attach = function(client, bufnr)
   end
 
   -- Diagnostics
-  keymap("n", "gl", vim.diagnostic.open_float, opts)
+  keymap("n", "ld", vim.diagnostic.open_float, opts)
   keymap("n", "[d", vim.diagnostic.goto_prev, opts)
   keymap("n", "]d", vim.diagnostic.goto_next, opts)
 
@@ -69,28 +69,6 @@ M.on_attach = function(client, bufnr)
   vim.bo[bufnr].tagfunc = "v:lua.vim.lsp.tagfunc"
 end
 
----- =========================
----- Diagnostics UI
----- =========================
---vim.diagnostic.config({
---  virtual_text = { spacing = 4, prefix = "●" },
---  signs = true,
---  underline = true,
---  update_in_insert = false,
---  severity_sort = true,
---})
---
----- Diagnostic Signs
---local signs = {
---  Error = " ",
---  Warn  = " ",
---  Hint  = " ",
---  Info  = " ",
---}
---for type, icon in pairs(signs) do
---  local hl = "DiagnosticSign" .. type
---  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
---end
 
 -- =========================
 -- Autocommand: Attach Automatically
