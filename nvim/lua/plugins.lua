@@ -7,13 +7,15 @@ vim.call('plug#begin')
 
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
 Plug('ggandor/leap.nvim')
-Plug('akinsho/toggleterm.nvim',{ ['tag'] = '*' })
+Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })
 Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
 Plug("nvim-treesitter/nvim-treesitter-context")
 Plug("nvim-treesitter/nvim-treesitter-textobjects")
 Plug("mason-org/mason.nvim")
 Plug("neovim/nvim-lspconfig")
 Plug("mason-org/mason-lspconfig.nvim")
+Plug('nvim-lua/plenary.nvim')
+Plug('nvim-telescope/telescope.nvim')
 
 -- End of Plugins
 vim.call('plug#end')
