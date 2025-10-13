@@ -6,7 +6,7 @@ echo "Type of shell $-"
 #######Bashrc set up###########
 path="$HOME/dotconfigs/setup"
 if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
-    if [[ "$-" == *_i_* ]]; then
+    if echo $- | grep -q "i"; then
         echo "Interactive shell"
         source "$path/ishell_config"
     else
