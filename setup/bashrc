@@ -4,6 +4,7 @@
 if [ -f "$HOME/dotconfigs/setup/shell_config.sh" ]; then
   case $- in
     *i*)
+       echo "Interactive shell"
        source "$HOME/dotconfigs/setup/ishell_config.sh" 
       ;;
     *) ;;
