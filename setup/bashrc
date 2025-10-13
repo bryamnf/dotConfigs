@@ -2,6 +2,12 @@
 
 #######Bashrc set up###########
 if [ -f "$HOME/dotconfigs/setup/shell_config.sh" ]; then
+  case $- in
+    *i*)
+       source "$HOME/dotconfigs/setup/ishell_config.sh" 
+      ;;
+    *) ;;
+  esac
   source "$HOME/dotconfigs/setup/shell_config.sh" 
   echo "Using dotconfigs"
 fi
