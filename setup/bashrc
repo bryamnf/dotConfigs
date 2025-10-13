@@ -1,12 +1,11 @@
-#If it's and interactive shell 
-case $- in
-    *i*)
-      if [ -f "$HOME/dotconfigs/shell_config.sh" ]; then
-        source "$HOME/dotconfigs/shell_config.sh" 
-      fi
-      ;;
-    *) ;;
-esac
+#/bin/bash -l
+
+#######Bashrc set up###########
+if [ -f "$HOME/dotconfigs/setup/shell_config.sh" ]; then
+  source "$HOME/dotconfigs/setup/shell_config.sh" 
+  echo "Using dotconfigs"
+fi
+##############################
 
 ######MODULES#######
 source /usr/share/modules/init/bash
