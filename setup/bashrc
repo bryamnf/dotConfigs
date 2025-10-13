@@ -1,16 +1,20 @@
-#/bin/bash -l
+#/bin/bash
+
+####Type of shell#####
+echo "Type of shell $-"
 
 #######Bashrc set up###########
-if [ -f "$HOME/dotconfigs/setup/shell_config.sh" ]; then
-  case $- in
-    *i*)
-       echo "Interactive shell"
-       source "$HOME/dotconfigs/setup/ishell_config.sh" 
-      ;;
-    *) ;;
-  esac
-  source "$HOME/dotconfigs/setup/shell_config.sh" 
-  echo "Using dotconfigs"
+path="$HOME/dotconfigs/setup"
+if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
+    if [[ "$-" == *_i_* ]]; then
+        echo "Interactive shell"
+        source "$path/ishell_config"
+    else
+        echo "Noninteractive shell"
+    fi
+
+    source "$path/shell_config"
+    echo "Using dotconfigs"
 fi
 ##############################
 
