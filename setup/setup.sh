@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Set up of bashrc
+ln -sfn $HOME/dotconfigs/setup/profile $HOME/.profile
 ln -sfn $HOME/dotconfigs/setup/bashrc $HOME/.bashrc
 
 mkdir $HOME/.local
