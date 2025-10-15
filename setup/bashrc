@@ -8,17 +8,12 @@ path="$HOME/dotconfigs/setup"
 if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
     source "$path/shell_config"
     if echo $- | grep -q "i"; then
-        echo "Interactive shell"
         source "$path/ishell_config"
-        echo "Using dotconfigs"
+        echo "Using dotconfigs in interactive shell"
         cat "$path/ascii_art"
     else
-        echo "Noninteractive shell"
-        echo "Using dotconfigs"
+        echo "Using dotconfigs in non-interactive shell"
     fi
 fi
 ##############################
 
-######MODULES#######
-source /usr/share/modules/init/bash
-####################
