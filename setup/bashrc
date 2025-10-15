@@ -11,7 +11,7 @@ if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
         echo "Interactive shell"
         source "$path/ishell_config"
         echo "Using dotconfigs"
-#        cat "$path/ascii_art"
+        cat "$path/ascii_art"
     else
         echo "Noninteractive shell"
         echo "Using dotconfigs"
