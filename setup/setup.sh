@@ -6,12 +6,13 @@ ln -sfn $HOME/dotconfigs/setup/bashrc $HOME/.bashrc
 
 mkdir $HOME/.local
 mkdir $HOME/.config
-cd $HOME/.local
 mkdir bin
 mkdir share
 mkdir lib
 mkdir usr
 mkdir state
+
+cd $HOME/.local
 
 # Nvim
 if [ -d "$nvim"]; then
@@ -33,10 +34,10 @@ if [ -d "$nvim"]; then
 fi
 
 # UV
-if [ -f "$(pwd)/bin/uv"] && [ -f "$(pwd)/bin/uvx"]; then
+if test -f "$HOME/.local/bin/uv" && test -f "$HOME/.local/bin/uvx"; then
   echo "uv is already installed"
 else
   echo "installing uv"
   curl -LsSf https://astral.sh/uv/install.sh | sh
-fi 
+fi
 
