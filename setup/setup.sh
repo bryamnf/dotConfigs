@@ -14,7 +14,7 @@ mkdir usr
 mkdir state
 
 # Nvim
-if [ -d $nvim]; then
+if [ -d "$nvim"]; then
     echo "nvim is already installed"
   else
     echo "installing nvim"
@@ -31,3 +31,12 @@ if [ -d $nvim]; then
     dpkg-deb -x wl-clipboard*.deb $HOME/.local
     rm wl-clipboard*.deb
 fi
+
+# UV
+if [ -f "$(pwd)/bin/uv"] && [ -f "$(pwd)/bin/uvx"]; then
+  echo "uv is already installed"
+else
+  echo "installing uv"
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+fi 
+

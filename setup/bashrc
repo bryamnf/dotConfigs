@@ -6,6 +6,7 @@ echo "Type of shell $-"
 #######Bashrc set up###########
 path="$HOME/dotconfigs/setup"
 if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
+    source "$path/shell_config"
     if echo $- | grep -q "i"; then
         echo "Interactive shell"
         source "$path/ishell_config"
@@ -13,7 +14,6 @@ if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
         echo "Noninteractive shell"
     fi
 
-    source "$path/shell_config"
     echo "Using dotconfigs"
 fi
 ##############################
