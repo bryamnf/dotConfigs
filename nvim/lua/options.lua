@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 
 -- Relative number
 vim.o.relativenumber = true
+vim.o.number = true
 
 -- Clipboard
 vim.api.nvim_set_option("clipboard", "unnamedplus")
