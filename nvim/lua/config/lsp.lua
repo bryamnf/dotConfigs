@@ -47,7 +47,7 @@ M.on_attach = function(client, bufnr)
   end
 
   -- Diagnostics
-  keymap("n", "ld", vim.diagnostic.open_float, opts)
+  --  keymap("n", "ld", vim.diagnostic.open_float, opts) Not good becuase the  in normal mode.
   keymap("n", "[d", vim.diagnostic.goto_prev, opts)
   keymap("n", "]d", vim.diagnostic.goto_next, opts)
 
