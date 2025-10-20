@@ -7,7 +7,6 @@ if [ -f "$path/shell_config" ] && [ -f "$path/ishell_config" ]; then
     if echo $- | grep -q "i"; then
         source "$path/ishell_config"
         echo "Using dotconfigs in interactive shell mode!"
-        cat "$path/ascii_art"
     fi
 fi
 ##############################
