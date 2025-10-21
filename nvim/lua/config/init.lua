@@ -1,6 +1,7 @@
 require('config.colorscheme')
 require('config.leap')
 require('config.toggleterm')
+require('config.mini_pairs')
 require('config.treesitter')
 require('config.treesitter-context')
 require('config.treesitter-textobjects')

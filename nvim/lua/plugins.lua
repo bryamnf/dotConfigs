@@ -7,6 +7,7 @@ vim.call('plug#begin')
 Plug('Mofiqul/vscode.nvim', { ['as'] = 'vscode' })
 Plug('ggandor/leap.nvim')
 Plug('akinsho/toggleterm.nvim', { ['tag'] = '*' })
+Plug('nvim-mini/mini.pairs', { ['branch'] = 'stable' })
 
 -- Syntax highlighting
 Plug("nvim-treesitter/nvim-treesitter", { ['do'] = ":TSUpdate" })
