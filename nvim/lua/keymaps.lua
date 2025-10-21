@@ -35,6 +35,8 @@ keymap({ 'n', 'v' }, '<leader>p', '"+p', opts)
 
 -- Explore
 keymap({ 'n', 'v' }, 'q', ':Ex<CR>', opts)
+-- Macros
+keymap({'n'}, 'm', 'q', opts)
 
 
 -- Resize window using <ctrl> arrow keys
