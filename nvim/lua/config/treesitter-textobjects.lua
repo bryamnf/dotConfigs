@@ -68,6 +68,7 @@ require 'nvim-treesitter.configs'.setup {
 				["[f"] = "@function.outer",
 				["[x"] = "@parameter.inner",
 				["[a"] = "@assignment.outer",
+				["]]a"] = "@assignment.rhs",
 				["[/"] = "@comment.outer",
 				["[c"] = "@conditional.outer",
 				["[l"] = "@loop.outer",
@@ -81,8 +82,10 @@ require 'nvim-treesitter.configs'.setup {
 
 			goto_next_end = {
 				["]f"] = "@function.outer",
-				["]x"] = "@parameter.inner",
+				["]x"] = "@parameter.outer",
 				["]a"] = "@assignment.outer",
+				["[[a"] = "@assignment.lhs",
+				["[["] = "@assignment.lhs",
 				["]/"] = "@comment.outer",
 				["]c"] = "@conditional.outer",
 				["]l"] = "@loop.outer",
