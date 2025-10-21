@@ -68,33 +68,28 @@ require 'nvim-treesitter.configs'.setup {
 				["[f"] = "@function.outer",
 				["[x"] = "@parameter.inner",
 				["[a"] = "@assignment.outer",
-				["]]a"] = "@assignment.rhs",
-				["[/"] = "@comment.outer",
-				["[c"] = "@conditional.outer",
-				["[l"] = "@loop.outer",
-				["[r"] = "@return.outer",
-				["[n"] = "@number.inner",
-				["[e"] = "@call.outer", -- execute
-				["[cl"] = "@class.outer",
-				["[b"] = "@block.outer",
-				["[s"] = "@statement.inner",
+				["]s"] = "@assignment.rhs",
 			},
 
 			goto_next_end = {
 				["]f"] = "@function.outer",
 				["]x"] = "@parameter.outer",
 				["]a"] = "@assignment.outer",
-				["[[a"] = "@assignment.lhs",
-				["[["] = "@assignment.lhs",
-				["]/"] = "@comment.outer",
-				["]c"] = "@conditional.outer",
-				["]l"] = "@loop.outer",
-				["]r"] = "@return.outer",
-				["]n"] = "@number.inner",
-				["]e"] = "@call.outer", -- execute
-				["]cl"] = "@class.outer",
-				["]b"] = "@block.outer",
-				["]s"] = "@statement.inner",
+				["[s"] = "@assignment.lhs",
+			},
+
+			goto_previous_start = {
+				["<f"] = "@function.outer",
+				["<x"] = "@parameter.inner",
+				["<a"] = "@assignment.outer",
+				[">s"] = "@assignment.rhs",
+			},
+
+			goto_previous_end = {
+				[">f"] = "@function.outer",
+				[">x"] = "@parameter.outer",
+				[">a"] = "@assignment.outer",
+				["<s"] = "@assignment.lhs",
 			},
 		},
 	},
@@ -103,5 +98,5 @@ require 'nvim-treesitter.configs'.setup {
 local ts_repeat_move = require "nvim-treesitter.textobjects.repeatable_move"
 
 -- Always forward with > and backward with <
-vim.keymap.set({ "n", "x", "o" }, ">", ts_repeat_move.repeat_last_move_next)
-vim.keymap.set({ "n", "x", "o" }, "<", ts_repeat_move.repeat_last_move_previous)
+vim.keymap.set({ "n", "x", "o" }, "L", ts_repeat_move.repeat_last_move_next)
+vim.keymap.set({ "n", "x", "o" }, "H", ts_repeat_move.repeat_last_move_previous)
