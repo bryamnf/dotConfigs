@@ -3,19 +3,17 @@ local conform = require("conform")
 conform.setup({
   formatters_by_ft = {
     -- Conform will run multiple formatters sequentially
-    python = { "ruff", lsp_format = "fallback", stop_after_first = true },
+    python = { "ruf", lsp_format = "fallback", stop_after_first = true },
   },
   format_on_save = {
     lsp_fallback = true,
-    async = false,
-    timeout_ms = 1000,
+    timeout_ms = 2000,
   },
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>ff", function()
+vim.keymap.set({ "n", "v" }, "<leader>f", function()
   conform.format({
     lsp_fallback = true,
-    async = false,
-    timeout_ms = 1000,
+    async = true,
   })
 end, { desc = "Format file" })
