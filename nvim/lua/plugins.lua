@@ -27,5 +27,8 @@ Plug("stevearc/conform.nvim")
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 
+-- Harpoon
+Plug('ThePrimeagen/harpoon', { ['branch'] = 'harpoon2' })
+
 -- End of Plugins
 vim.call('plug#end')
